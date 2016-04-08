@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "easy_sqlite.h"
 
 using namespace std;
@@ -107,7 +108,7 @@ namespace easy_sqlite
 
 	void sqlite::close()
 	{
-		sqlite3_close_v2(m_db);
+		sqlite3_close(m_db);
 		m_is_open = false;
 	}
 
